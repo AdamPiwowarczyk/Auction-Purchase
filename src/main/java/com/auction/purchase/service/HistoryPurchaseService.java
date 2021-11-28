@@ -1,7 +1,7 @@
-package com.auction.history.service;
+package com.auction.purchase.service;
 
-import com.auction.history.model.HistoryPurchase;
-import com.auction.history.model.Subject;
+import com.auction.purchase.model.HistoryPurchase;
+import com.auction.purchase.model.Subject;
 
 import java.util.List;
 

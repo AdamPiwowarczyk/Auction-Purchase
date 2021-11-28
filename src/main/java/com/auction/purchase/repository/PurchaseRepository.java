@@ -1,6 +1,6 @@
-package com.auction.history.repository;
+package com.auction.purchase.repository;
 
-import com.auction.history.model.Purchase;
+import com.auction.purchase.model.Purchase;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,8 +1,8 @@
-package com.auction.history.service;
+package com.auction.purchase.service;
 
-import com.auction.history.model.HistoryPurchase;
-import com.auction.history.model.Subject;
-import com.auction.history.repository.HistoryRepository;
+import com.auction.purchase.model.HistoryPurchase;
+import com.auction.purchase.model.Subject;
+import com.auction.purchase.repository.HistoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +20,9 @@ public class HistoryPurchaseServiceImpl implements HistoryPurchaseService {
     }
 
     @Override
-    public List<Subject> findHistoryPurchasesByUsername(String username) {//zmienić typ zwracany na SubjectDto (subject)
+    public List<Subject> findHistoryPurchasesByUsername(String username) {
         List<String> purchases = historyRepository.findAllByUsername(username).stream()
-                .map(purchase -> purchase.getCode())
+                .map(HistoryPurchase::getCode)
                 .collect(Collectors.toList());
         return subjectServiceClient.getSubjectsByCodes(purchases);
     }

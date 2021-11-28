@@ -1,6 +1,6 @@
-package com.auction.history.service;
+package com.auction.purchase.service;
 
-import com.auction.history.model.Subject;
+import com.auction.purchase.model.Subject;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +13,4 @@ import java.util.List;
 public interface SubjectServiceClient {
     @PostMapping("/codes")
     List<Subject> getSubjectsByCodes(@RequestBody List<String> codes);
-
-    //    @PostMapping("/codes")
-//    List<PurchaseDto> getSubjectsByCodes(@RequestHeader(name = "Authorization") String token, @RequestBody List<String> codes);
 }

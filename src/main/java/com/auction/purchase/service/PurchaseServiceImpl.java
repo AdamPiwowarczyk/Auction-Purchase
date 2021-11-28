@@ -1,8 +1,8 @@
-package com.auction.history.service;
+package com.auction.purchase.service;
 
-import com.auction.history.model.Purchase;
-import com.auction.history.model.Subject;
-import com.auction.history.repository.PurchaseRepository;
+import com.auction.purchase.model.Purchase;
+import com.auction.purchase.model.Subject;
+import com.auction.purchase.repository.PurchaseRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,10 +38,6 @@ public class PurchaseServiceImpl implements PurchaseService {
         List<String> codes = purchases.stream()
                 .map(Purchase::getCode)
                 .collect(Collectors.toList());
-
-//        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-//        OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) authentication.getDetails();
-//        String token = String.format("Bearer %s", details.getTokenValue());
 
         return subjectServiceClient.getSubjectsByCodes(codes);
     }

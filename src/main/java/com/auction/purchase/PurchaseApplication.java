@@ -1,4 +1,4 @@
-package com.auction.history;
+package com.auction.purchase;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class HistoryApplication {
+public class PurchaseApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(HistoryApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(PurchaseApplication.class, args);
+    }
 
 }

@@ -6,12 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.11.RELEASE</version>
-		<relativePath/> <!-- lookup parent from com.auction.history.repository -->
+		<relativePath/> <!-- lookup parent from com.auction.purchase.repository -->
 	</parent>
 	<groupId>com.auction</groupId>
-	<artifactId>history</artifactId>
+	<artifactId>purchase</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>history</name>
+	<name>purchase</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>

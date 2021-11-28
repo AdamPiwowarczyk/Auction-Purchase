@@ -1,7 +1,7 @@
-package com.auction.history.service;
+package com.auction.purchase.service;
 
-import com.auction.history.model.Purchase;
-import com.auction.history.model.Subject;
+import com.auction.purchase.model.Purchase;
+import com.auction.purchase.model.Subject;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 

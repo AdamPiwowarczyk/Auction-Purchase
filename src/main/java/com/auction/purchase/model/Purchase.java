@@ -1,4 +1,4 @@
-package com.auction.history.model;
+package com.auction.purchase.model;
 
 import lombok.Getter;
 import lombok.Setter;

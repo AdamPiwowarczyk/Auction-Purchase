@@ -1,4 +1,4 @@
-package com.auction.history;
+package com.auction.purchase;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

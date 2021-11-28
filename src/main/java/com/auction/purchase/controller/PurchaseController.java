@@ -1,10 +1,10 @@
-package com.auction.history.controller;
+package com.auction.purchase.controller;
 
-import com.auction.history.model.HistoryPurchase;
-import com.auction.history.model.Purchase;
-import com.auction.history.model.Subject;
-import com.auction.history.service.HistoryPurchaseService;
-import com.auction.history.service.PurchaseService;
+import com.auction.purchase.model.HistoryPurchase;
+import com.auction.purchase.model.Purchase;
+import com.auction.purchase.model.Subject;
+import com.auction.purchase.service.HistoryPurchaseService;
+import com.auction.purchase.service.PurchaseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,9 +14,9 @@ import java.util.Comparator;
 import java.util.List;
 
 @RestController
-@RequestMapping("/history")
+@RequestMapping("/purchases")
 @RequiredArgsConstructor
-public class HistoryController {
+public class PurchaseController {
     private final PurchaseService purchaseService;
     private final HistoryPurchaseService historyPurchaseService;
 
@@ -43,7 +43,6 @@ public class HistoryController {
         });
         return ResponseEntity.ok(HttpStatus.OK);
     }
-
 
     @GetMapping("/bidded/{username}")
     public List<Subject> getPurchases(@PathVariable String username) {
